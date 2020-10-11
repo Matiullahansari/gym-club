@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Gym Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        overflow-x:0;
+    }
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Oswald',sans-serif;
+    }
+    header{
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        z-index: 1;
+        background-color:rgb(104, 14, 14);
+        padding:15px;
+    }
+    header.container{
+        -webkit-display:flex;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header .logo a{
+        font-size: 30px;
+        text-decoration: none;
+        color: white;
+        font-weight: 700;
+    
+    }
+    header .logo a span{
+        color:black;
+    }
+    header .nav{
+    font-size: 20px;
+	text-decoration: none;
+	color:#ffffff;
+	font-weight: 700;
+    align-items: right ;
+    padding-left: 750px;
+    
+    border-bottom-style: none;
+    }
+    header .nav a{
+        color: white;
+        font-size: 20px;
+    }
+    
+    .home{
+        height: 100vh;
+        background-image:url('img/tiger.jpg');
+        background-size: cover;
+        padding:15px;
+        -webkit-display:flex;
+        display: flex;
+        position: relative;
+    }
+    .home .container{
+        -webkit-display:flex;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        padding-top: 470px;
+        padding-left: 30px;
+    }
+    .home h1{
+        color: white;
+        font-size: 60px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0;
+        
+    }
+
+    .home h1 span{
+        color: brown;
+    }
+
+    
+/*About section*/
+
+.about{
+	padding:80px 0px;
+	background-color:#8baff1;
+}
+
+.about .content{ 
+ -webkit-display: flex;
+ display: flex;
+}
+.about .content .box{
+	flex:0 0 33.33%;
+	max-width: 33.33%;
+	padding:15px;
+}
+.about .content .box .inner{
+	background-color:#222222;
+}
+.about .content .box:nth-child(2) .inner{
+	background-color: #c11325;
+}
+.about .content .box .inner .img img{
+	width: 100%;
+}
+.about .content .box .inner .text{
+	padding:30px;
+}
+
+.about .content .box .inner .text h4{
+  font-size: 20px;
+  margin:0;
+  padding: 0px 0px 15px;
+  font-weight: 500;
+  color:#ffffff;
+ text-transform: capitalize;
+  text-align: center;
+}
+.about .content .box .inner .text p{
+	font-size: 15px;
+	line-height:20px;
+	color:#ffffff;
+	text-align: center;
+	margin:0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+ .service{
+     padding:80px 0px;
+     background-color: #c11325;
+ } 
+.service .content{
+    -webkit-display:flex;
+    display: flex;
+}
+.service .content .box{
+    flex:0 0 50%; 
+    max-width: 50%;
+    padding:80px;
+}  
+.service .content .text h2{
+    font-size: 30px;
+    font-weight:500;
+    color: white;
+    padding: 0px 0px 20px;
+}
+.service .content .text p{
+    font-size:15px;
+    line-height:20px;
+    color: white;
+    padding:0px 0px 20px;
+    font-family: 'open sans',sans-serif;
+}
+.service .content .text .btn{
+	padding:8px 30px;
+	background-color: #222222;
+	color:#ffffff;
+	text-decoration: none;
+	display: inline-block;
+	border:1px solid transparent;
+	cursor: pointer;
+	-webkit-transition: all .5s ease;
+	transition: all .5s ease;
+}
+.service .content .text .btn:hover{
+	border:1px solid #ffffff;
+	color:#ffffff;
+	background-color: transparent;
+}
+.service .content .accordian-container {
+    margin-bottom: 5px;
+}
+.service .content .accordian-container .head{
+    background-color: black;
+    position: relative;
+    padding:12px 15px;
+    cursor: pointer;
+
+}
+.service .content .accordian-container .head h4{
+  font-size: 20px;
+  margin:0;
+  padding:0;
+  font-weight: 500;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+.service .content .accordian-container.active.head{
+    background-color: black;
+}
+.service .content .accordian-container .body p{
+    font-size: 15px;
+	line-height:20px;
+	color:#ffffff;
+	margin:0;
+	padding:0;
+	font-family: 'Open Sans', sans-serif;
+    background-color: black;	
+}
+
+/* Classes sections*/
+
+.classes{
+	padding:80px 0px 50px;
+	background-color: #ffffff;
+}
+
+.classes .content{
+	-webkit-display: flex;
+	display: flex;
+}
+
+.classes .content .box{
+	padding:15px;
+	flex:0 0 50%;
+	max-width: 50%;
+}
+
+.classes .content .img img{
+	width: 100%;
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+.classes .content .text h2{
+    font-size: 30px;
+    font-weight: 500;
+    color: #000000;
+    padding: 0px 0px 20px;
+}
+
+.classes .content .text p{
+	font-size: 15px;
+    line-height: 20px;
+    color: #000000;
+    margin: 0;
+    padding: 0px 0px 30px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.classes .content .class-items .item{
+	margin-bottom: 30px;
+	display: flex;
+}
+.classes .content .class-items .item:nth-child(1){
+ background-color: #222222;
+}
+.classes .content .class-items .item:nth-child(2){
+ background-color: #c11325;
+}
+.classes .content .class-items .item .item-text{
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.classes .content .class-items .item .item-text,
+.classes .content .class-items .item .item-img{
+	flex:0 0 50%;
+	max-width: 50%;
+	position: relative;
+}
+
+.classes .content .class-items .item .item-img img{
+ width: 100%;
+ display: block;
+}
+.classes .content .class-items .item .item-img .price{
+	position: absolute;
+	height: 50px;
+	width: 60px;
+	font-size:20px;
+	font-weight: 500; 
+	color:#ffffff;
+	text-align: center;
+	line-height: 50px;
+}
+.classes .content .class-items .item:nth-child(1) .item-img .price{
+ background-color: #c11325;
+ left:0;
+ top:0;
+}
+.classes .content .class-items .item:nth-child(2) .item-img .price{
+ background-color: #222222;
+ right:0;
+ top:0;
+}
+.classes .content .class-items .item .item-text h4{
+	font-size: 20px;
+    margin: 0;
+    padding: 0px 0px 15px;
+    font-weight: 500;
+    color: #ffffff;
+    text-transform: capitalize;
+    text-align: left;
+}
+
+.classes .content .class-items .item .item-text p{
+	font-size: 15px;
+    line-height: 20px;
+    color: #ffffff;
+    text-align:left;
+    margin: 0;
+    padding:0 0 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+.classes .content .class-items .item .item-text a{
+ font-size: 16px;
+ text-decoration: none;
+ display: inline-block;
+}
+
+.classes .content .class-items .item .item-text a{
+	color:#ffffff;
+}
+
+/*Start Today Section*/
+.start-today{
+	background-color: #222222;
+}
+
+.start-today .content{
+	-webkit-display: flex;
+	display: flex;
+	align-items: center;
+}
+
+.start-today .content .box{
+	flex:0 0 50%;
+	max-width: 50%;
+	padding:0px 15px;
+}
+
+.start-today .content .img img{
+	width: 100%;
+	display: block;
+}
+
+.start-today .content .text h2{
+	font-size: 30px;
+    font-weight: 500;
+    color: #ffffff;
+    padding: 0px 0px 20px;
+}
+
+.start-today .content .text p{
+	font-size: 15px;
+    line-height: 20px;
+    color: #ffffff;
+    margin: 0;
+    padding: 0px 0px 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.start-today .content .text .btn{
+	padding: 8px 30px;
+    background-color: #c11325;
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid transparent;
+    cursor: pointer;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.start-today .content .text .btn:hover{
+	color:#ffffff;
+	border-color: #ffffff;
+	background-color: transparent;
+}
+
+
+
+
+/*Class Schedule Section*/
+.schedule{
+	padding:80px 0px;
+}
+
+.schedule .content{
+	-webkit-display: flex;
+	display: flex;
+}
+
+.schedule .content .box{
+	flex:0 0 50%;
+	max-width: 100%;
+	padding:15px;
+}
+
+.schedule .content .text h2{
+   font-size: 30px;
+    font-weight: 500;
+    color: #000000;
+    padding: 0px 0px 20px;
+}
+
+.schedule .content .text p{
+	font-size: 15px;
+    line-height: 20px;
+    color: #222222;
+    margin: 0;
+    padding: 0px 0px 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+.schedule .content .text img{
+	width: 100%;
+	transform: rotateY(180deg);
+}
+
+.schedule .content .timing .table{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.schedule .content .timing .table td{
+	border:1px solid #dfdfdf;
+	padding: 8px;
+	font-size: 15px;
+	text-align: center;
+	color:#222222;
+}
+
+.schedule .content .timing .table tr:nth-child(even) td.day{
+	background-color: #222222;
+}
+.schedule .content .timing .table tr:nth-child(odd) td.day{
+	background-color: #444444;
+}
+.schedule .content .timing .table tr:nth-child(1) td.day{
+	background-color: #c11325;
+}
+.schedule .content .timing .table tr td.day{
+	color:#ffffff;
+	border-color:transparent;
+}
+
+/*Gallay Section*/
+.gallery .content{
+    -webkit-display:flex;
+    display:flex;
+    flex-wrap: wrap;
+
+     
+}
+.gallery .content .box{
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.gallery .content .box img{
+    display: block;
+    width: 100%;
+    -webkit-filter:grayscale(100%);
+    filter:grayscale(100%);
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+
+}
+.gallery .content .box img:hover{
+    -webkit-filter: grayscale(0%);
+    filter:grayscale(0%);
+    
+}
+.gallery h2{
+    font-size: 30px;
+    font-weight: 500;
+    color: black;
+    text-align: center;
+}
+
+/* price sections*/
+.price-package{
+    padding: 80px 0px;
+    background-color: whitesmoke;
+
+}
+.price-package h2{
+    font-size: 30px;
+    font-weight: 500;
+    color: black;
+    padding: 0px 0px 20px;
+    text-align: center;
+}
+.price-package .title-p{
+    font-size: 15px;
+    line-height: 20px;
+    color: black;
+    margin: 0;
+    text-align: center;
+    padding: 0 20% 50px;
+    font-family: 'Open-sens' sans-serif;
+
+}
+.price-package .content{
+    -webkit-display:flex;
+    display: flex;
+}
+.price-package .content .box{
+	flex:0 0 33.33%;
+	max-width: 33.33%;
+	padding: 15px;
+}
+.price-package .content .box .inner{
+    background-color:white;
+
+}
+.price-package .content .box .inner .price-tag{
+    padding:15px;
+    font-size:20px;
+    background-color:#c11325;
+    color:white;
+    text-align:center;
+    font-weight: 700;
+}
+.price-package .content .box .inner .text{
+    padding: 30px 15px;
+    text-align:center;
+
+}
+.price-package .content .box .inner .h3{
+    font-size:24px;
+    color:black;
+    margin:0;
+    font-weight:700;
+
+}
+.price-package .content .box .inner .text p{
+    font-size:15px;
+    line-height:20px;
+    color:rgb(155, 11, 11);
+    text-align:center;
+    padding:0 0 5px;
+    font-family: 'Open-sans' sans-serif;
+}
+.price-package .content .box .inner .text .btn{
+    padding:8px 30px;
+    background-color:#c11325;
+    color:white;
+    text-decoration:none;
+    display:inline-block;
+    border:1px solid transparent;
+    cursor:pointer;
+    -webkit-transitions:all .5s ease;
+    transition:all .5s ease;
+    margin-top:10px;
+}
+.price-package .content .box .inner .text .btn:hover{
+    background-color:black;
+    color:black;
+    background-color:transparent;
+}
+.price-package .content .box .inner .img  img{
+    width:100%;
+}
+.contact{
+    padding:80px 0px;
+    background-color:black;
+
+
+}
+.contact .content{
+    -webkit-display:flex;
+    display:flex;
+
+}
+.contact .content .box {
+    flex:0 0 50%;
+    max-width: 50%;
+    padding:15px;
+}
+.contact .content .form input,
+.contact .content .form textarea{
+    height:45px;
+    width:100%;
+    padding:6px 12px;
+    margin-bottom:25px;
+    background-color:transparent;
+    border:1px solid white;
+    font-family:'Open-sans' sans-serif;
+    color: white;
+
+}
+.contact .content .form input:focus,
+.contact .content .form textarea:focus{
+    outline:none;
+}
+.contact .content .form input ::placeholder,
+.contact .content .formf textarea::placeholder{
+    color:white;
+}
+.contact .content .form button{
+	border:none;
+	outline: none;
+	box-shadow: none;
+	height: 45px;
+	padding:0px 50px;
+	border:1px solid transparent;
+	background-color: #c11325;
+	color:#ffffff;
+	font-size: 15px;
+	transition: all .5s ease;
+	cursor: pointer;
+}
+.contact .content .form button:hover{
+	background-color:transparent;
+	color:#ffffff; 
+    border-color:#ffffff;
+}
+
+.contact .content .text h2{
+	font-size: 30px;
+    font-weight: 500;
+    color: #c11325;
+    padding: 0px 0px 20px;
+}
+.contact .content .text p{
+    font-size: 15px;
+    line-height: 20px;
+    color: #ffffff;
+    margin: 0;
+    padding: 0px 0px 30px;
+    font-family: 'Open-sans', sans-serif;
+}
+
+.contact .content .text .info ul{
+	list-style: none;
+	padding:0;
+	margin:0;
+}
+
+.contact .content .text .info li{
+	display: block;
+	margin-bottom: 15px;
+	color:#ffffff;
+	font-size: 15px;
+	letter-spacing: 1px;
+	position: relative;
+	padding-left: 40px;
+	font-family: 'Open-Sans',sans-serif;
+}
+.contact .content .text .info li span{
+	display: inline-block;
+	position: absolute;
+	left:0px;
+	top:0px;
+	font-size: 20px;
+	color:#c11325;
+}
+.contact .content .text .social {
+	padding-top: 30px;
+}
+.contact .content .text .social a{
+	height: 40px;
+	width: 40px;
+	line-height: 40px;
+	text-align: center;
+	background-color: #c11325;
+    text-decoration: none;	
+    display: inline-block;
+    margin-right: 10px;
+    transition: all .5s ease;
+    border:1px solid transparent;
+} 
+
+.contact .content .text .social a:hover{
+	background-color: transparent;
+    border-color: #ffffff;
+}
+
+.contact .content .text .social a span{
+	color:#ffffff;
+	font-size: 20px;
+}
+
+.contact .content .text .copy{
+	border-top:1px solid #333333;
+	margin-top: 30px;
+	padding-top: 20px;
+	color:#c5c5c5;
+	font-size: 15px;
+}
+.nav{
+    color: red;
+}
+
+
+
+</style>
+<body>
+  
+  <header>
+      <div class="container">
+            <div class="logo">
+              <a href="#">Fit <span>Club</span></a>
+            </div>
+          <a href="javascript: void(0)" class="ham">
+              <span></span>
+              <span></span>
+          </a>
+
+          <div class="nav">
+              <ul>
+                  <a href="#home">Home</a>
+                  <a href="#about">About</a>
+                  <a href="#services">serviece</a>
+                  <a href="#classes">Classes</a>
+                  <a href="#schedule">schedule</a>
+                  <a href="#price">Price</a>
+                  <a href="#contact">Contact</a>
+              </ul>
+          </div>
+
+      </div>
+  </header>
+  <section class="home " id="home">
+      <div class="container">
+          <h1 class="wow slideInLeft" data-wow-delay="1s">It's<span>gym</span>time.Lets do it</h1>
+          <h1 class="wow slideInRight" data-wow-delay="1s">we are ready to <span>fit to</span></h1>
+      </div>
+
+  </section>
+  <section class="about" id="about">
+      <div class="container">
+          <div class="content">
+              <div class="box wow bounceInput">
+               <div class="inner">
+                   <div class="img">
+                       <img src="img/about1.jpg">
+                   </div>
+                   <div class="text">
+                       <h4>Free Councelation</h4>
+                       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+                   </div>
+               </div>   
+              </div>
+              <div class="box wow bounceInUp" data-wow-delay="0.2s">
+                <div class="inner">
+                       <div class="img">
+                             <img src="img/about2.jpg" alt="about" />
+                       </div>
+                       <div class="text">
+                          <h4>Best Training</h4>
+                           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+                      </div>
+                </div>
+              </div>
+              <div class="box wow bounceInUp" data-wow-delay="0.4s">
+                <div class="inner">
+                       <div class="img">
+                             <img src="img/about3.jpg" alt="about" />
+                       </div>
+                       <div class="text">
+                         <h4>Build Perfect Body</h4>
+                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+                      </div>
+                </div>
+               </div>
+          </div>
+      </div>
+  </section>
+  
+ <!-- Start Service -->
+ <section class="service" id="service">
+    <div class="container">
+         <div class="content">
+               <div class="text box wow slideInLeft">
+                 <h2>Services</h2>
+                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+                 <a href="" class="btn">Start Now</a>
+               </div>
+               
+               <div class="accordian box wow slideInRight">
+                       <div class="accordian-container active">
+                           <div class="head">
+                               <h4>Cardiovascular Equipment</h4>
+                               <span class="fa fa-angle-down"></span>
+                           </div>
+                           <div class="body">
+                               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+                           </div>
+                       </div>
+                       <div class="accordian-container">
+                           <div class="head">
+                               <h4>Strength Training Equipment</h4>
+                               <span class="fa fa-angle-up"></span>
+                           </div>
+                           <div class="body">
+                               
+                          </div>
+                       </div>
+                       <div class="accordian-container">
+                           <div class="head">
+                               <h4>Group Fitness Class</h4>
+                               <span class="fa fa-angle-up"></span>
+                           </div>
+                           <div class="body">
+                               
+                          </div>
+                       </div>
+                       <div class="accordian-container">
+                           <div class="head">
+                               <h4>Other Services</h4>
+                               <span class="fa fa-angle-up"></span>
+                           </div>
+                           <div class="body">
+                               
+                           </div>
+                       </div>
+               </div>
+         </div>
+    </div>
+</section>
+<!-- End Service -->
+
+<!--Start classes-->
+<section class="classes" id="classes">
+    <div class="container">
+        <div class="content">
+          <div class="box img wow slideInLeft">
+              <img src="img/class2.png" alt="">
+          </div>
+          <div class="box text wow slideInRight">
+              <h2>Our Classes</h2>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, nisi numquam? Ab quaerat praesentium, nihil odio fuga magnam, dolores facere ipsa officiis provident laudantium accusamus iste cumque commodi delectus tenetur.
+              </p>
+              <div class="class-items">
+                  <div class="item wow bounceInUp">
+                     <div class="item-img">
+                         <img src="img/class1.jpg" alt="classes">
+                         <div class="price">
+                             $99
+                         </div>
+                     </div>
+                     <div class="item-text">
+                         <h4>stretching Training</h4>
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis rem voluptatum facere, repudiandae dolorem debitis unde odio consequuntur enim, voluptatem nesciunt, eveniet quis ipsam aliquam assumenda ratione ex deserunt ad!</p>
+                         <a href="">Get details</a>
+                     </div>
+                  </div>
+                  <div class="item wow bounceInUp">
+                      <div class="item-text">
+                          <h4>Stretching Training</h4>
+                          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis aperiam consequatur quae. Ipsum sunt, tempora voluptates fuga distinctio, facere, necessitatibus tenetur aliquid magnam officiis at maxime corrupti aliquam accusantium temporibus?</p>
+                          <a href="">Get Details</a>
+                      </div>
+                      <div class="item-img">
+                          <img src="img/class1.jpg" alt="classes"/>
+                          <div class="price">
+                              $99
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+
+        </div>
+    </div>
+</section>
+<section class="start-today" >
+    <div class="container">
+        <div class="content">
+            <div class="box text wow slideInLeft">
+                <h2>Start your Training Todays</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum repudiandae placeat non quis, laboriosam quas, pariatur dicta quae ex possimus voluptas dolores, natus autem debitis veniam quia nihil. Eos, nisi.</p>
+                <a href="" class="btn">Start Now</a>
+            </div>
+            <div class="bow img wow slideInRight">
+                <img src="img/gallery4.jpg" alt="start today">  
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Start Schedule -->
+  <section class="schedule" id="schedule">
+  	 <div class="container">
+  	 	  <div class="content">
+  	 	  	   <div class="box text wow slideInLeft">
+  	 	  	   	   <h2>Classes Schedule</h2>
+  	 	  	   	   <p>
+  	 	  	   	   	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+  	 	  	   	   </p>
+  	 	  	   	   <img src="img/schedule1.png" alt="schedule" />
+  	 	  	   </div>
+  	 	  	   <div class="box timing wow slideInRight">
+                   <table class="table">
+                   	 <tbody>
+                   	 	<tr>
+                   	 		<td class="day">Monday</td>
+                   	 		<td><strong>9:00 AM</strong></td>
+                   	 		<td>Body Building <br/> 9:00 to 10:00 AM</td>
+                   	 		<td>Room No:210</td>
+			
+		       			</tr>
+                   	 	<tr>
+                   	 		<td class="day">Tuesday</td>
+                   	 		<td><strong>9:00 AM</strong></td>
+                   	 		<td>Body Building <br/> 9:00 to 10:00 AM</td>
+                   	 		<td>Room No:210</td>
+                   	 	</tr>
+                   	 	<tr>
+                   	 		<td class="day">Wednesday</td>
+                   	 		<td><strong>9:00 AM</strong></td>
+                   	 		<td>Body Building <br/> 9:00 to 10:00 AM</td>
+                   	 		<td>Room No:210</td>
+                   	 	</tr>
+                   	 	<tr>
+                   	 		<td class="day">Thursday</td>
+                   	 		<td><strong>9:00 AM</strong></td>
+                   	 		<td>Body Building <br/> 9:00 to 10:00 AM</td>
+                   	 		<td>Room No:210</td>
+                   	 	</tr>
+                   	 	<tr>
+                   	 		<td class="day">Friday</td>
+                   	 		<td><strong>9:00 AM</strong></td>
+                   	 		<td>Body Building <br/> 9:00 to 10:00 AM</td>
+                   	 		<td>Room No:210</td>
+                   	 	</tr>
+                   	 	<tr>
+                   	 		<td class="day">Saturday</td>
+                   	 		<td><strong>9:00 AM</strong></td>
+                   	 		<td>Body Building <br/> 9:00 to 10:00 AM</td>
+                   	 		<td>Room No:210</td>
+                   	 	</tr>
+                   	 </tbody>
+                   </table>
+  	 	  	   </div>
+  	 	  </div>
+  	 </div>
+  </section>
+<!-- End Schedule -->
+
+<!-- Start Gallery -->
+<section class="gallery" id="gallery">
+    <h2>Workout Gallery</h2>
+   <div class="content">
+        <div class="box wow slideInLeft">
+             <img src="img/gallery1.jpg" alt="gallery" />
+        </div>
+        <div class="box wow slideInRight">
+             <img src="img/gallery2.jpg" alt="gallery" />
+        </div>
+        <div class="box wow slideInLeft">
+             <img src="img/gallery3.jpg" alt="gallery" />
+        </div>
+        <div class="box wow slideInRight">
+             <img src="img/gallery4.jpg" alt="gallery" />
+        </div>
+   </div>
+</section>
+<!-- End Gallery -->
+<!--Start Price-->
+<section class="price-package" id="price">
+    <div class="container">
+        <h2>choose your package</h2>
+        <p class="title-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque minus expedita iste quis exercitationem tempora repellat, magnam alias libero dolor ducimus tempore corporis nulla fugit, est accusamus asperiores in totam?</p>
+        <div class="content">
+            <div class="box wow bounceInUp">
+                <div class="inner">
+                    <div class="price-tag">
+                        $59/month
+                    </div>
+                    <div class="img">
+                        <img src="img/price1.jpg" alt="price">
+                    </div>
+                    <div class="text">
+                        <h3>Body Building Training</h3>
+                        <p>Get Free WiFi</p>
+                        <p>Month to Month</p>
+                        <p>No Time Restrictions</p>
+                        <p>Gym and cardio</p>
+                        <p>service locker rooms</p>
+                        <a href="" class="btn">Jonin Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box wow bounceInUp">
+                <div class="inner">
+                    <div class="price-tag">
+                        $59/month
+                    </div>
+                    <div class="img">
+                        <img src="img/price2.jpg" alt="price">
+                    </div>
+                    <div class="text">
+                        <h3>Body Building Training</h3>
+                        <p>Get Free WiFi</p>
+                        <p>Month to Month</p>
+                        <p>No Time Restrictions</p>
+                        <p>Gym and cardio</p>
+                        <p>service locker rooms</p>
+                        <a href="" class="btn">Jonin Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box wow bounceInUp">
+                <div class="inner">
+                    <div class="price-tag">
+                        $59/month
+                    </div>
+                    <div class="img">
+                        <img src="img/price3.jpg" alt="price">
+                    </div>
+                    <div class="text">
+                        <h3>Body Building Training</h3>
+                        <p>Get Free WiFi</p>
+                        <p>Month to Month</p>
+                        <p>No Time Restrictions</p>
+                        <p>Gym and cardio</p>
+                        <p>service locker rooms</p>
+                        <a href="" class="btn">Jonin Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
